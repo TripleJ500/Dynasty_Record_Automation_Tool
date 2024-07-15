@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="InputFrame">
+  <grid id="27dc6" binding="inputDataPanel" layout-manager="GridLayoutManager" row-count="13" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="670" height="454"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="211c1" class="javax.swing.JTextField" binding="oigsTextField">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="27"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="1a874" class="javax.swing.JTextField" binding="digsTextField">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="5057a" class="javax.swing.JTextField" binding="offIndSeasonStatsTextField">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="a86c" class="javax.swing.JLabel" binding="defIndSeasonStatsLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Defensive Individual Season Stats (PSDE)"/>
+        </properties>
+      </component>
+      <component id="6f6f7" class="javax.swing.JTextField" binding="defIndSeasonStatsTextField">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="2b057" class="javax.swing.JLabel" binding="kickIndSeasonStatsLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Kicking Individual Season Stats (PSKI)"/>
+        </properties>
+      </component>
+      <component id="56632" class="javax.swing.JLabel" binding="schoolRecordsLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="School Records (RBKS)*"/>
+        </properties>
+      </component>
+      <component id="7340e" class="javax.swing.JLabel" binding="ncaaRecordsLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="NCAA Records (RBKN)*"/>
+        </properties>
+      </component>
+      <component id="298f5" class="javax.swing.JTextField" binding="ncaaRecordsTextField">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="ae3b1" class="javax.swing.JButton" binding="defIndGameStatsBrowseBtn">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="9d65" class="javax.swing.JButton" binding="offIndSeasonStatsBrowseBtn">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="c8e2f" class="javax.swing.JButton" binding="defIndSeasonStatsBrowseBtn">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="826f3" class="javax.swing.JButton" binding="kickIndSeasonStatsBrowseBtn">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="3ce11" class="javax.swing.JButton" binding="schoolRecordsBrowseBtn">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="c9b5a" class="javax.swing.JButton" binding="ncaaRecordsBrowseBtn">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="55ab9" class="javax.swing.JButton" binding="updateButton">
+        <constraints>
+          <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Update"/>
+        </properties>
+      </component>
+      <component id="32a34" class="javax.swing.JTextField" binding="playersTextField">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="848aa" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Players Tab (PLAY)*"/>
+        </properties>
+      </component>
+      <component id="71dac" class="javax.swing.JButton" binding="playersTabBrowseBtn">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="b66fb" class="javax.swing.JLabel" binding="offensiveIndividualGameStatsLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Offensive Individual Game Stats  (BOFF)"/>
+        </properties>
+      </component>
+      <component id="6a55" class="javax.swing.JLabel" binding="defensiveIndividualGameStatsLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Defensive Individual Game Stats (BDEF)"/>
+        </properties>
+      </component>
+      <component id="fc73" class="javax.swing.JTextField" binding="schoolRecordsTextField">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="fd9b8" class="javax.swing.JLabel" binding="offIndSeasonStatsLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Offensive Individual Season Stats (PSOF)"/>
+        </properties>
+      </component>
+      <component id="4b9a" class="javax.swing.JButton" binding="offIndGameStatsBrowseBtn">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="78" height="27"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="d0600" class="javax.swing.JTextField" binding="returnIndSeasonStatsTextField">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="672c5" class="javax.swing.JButton" binding="returnIndSeasonStatsBrowseBtn">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="66604" class="javax.swing.JLabel" binding="returnIndSeasonStatsLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Return Individual Season Stats (PSKP)"/>
+        </properties>
+      </component>
+      <component id="8601" class="javax.swing.JTextField" binding="teamGameStatsTextField">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="55642" class="javax.swing.JLabel" binding="teamGameStatsLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Team Game Stats (BTES)"/>
+        </properties>
+      </component>
+      <component id="85de4" class="javax.swing.JButton" binding="teamGameStatsBrowseBtn">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="2475e" class="javax.swing.JLabel" binding="coachCareerStatsLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Coach Career Stats (COCH)"/>
+        </properties>
+      </component>
+      <component id="1fe95" class="javax.swing.JTextField" binding="coachCareerStatsTextField">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="eaaf7" class="javax.swing.JButton" binding="coachCareerStatsBrowseBtn">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+      <component id="e7531" class="javax.swing.JTextField" binding="kickIndSeasonStatsTextField">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="e3e0a" class="javax.swing.JLabel" binding="scheduleDataLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Schedule Data (SCHD)"/>
+        </properties>
+      </component>
+      <component id="3ca13" class="javax.swing.JTextField" binding="scheduleDataTextField">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="283" height="30"/>
+          </grid>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="eed89" class="javax.swing.JButton" binding="scheduleDataBrowseBtn">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Browse"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

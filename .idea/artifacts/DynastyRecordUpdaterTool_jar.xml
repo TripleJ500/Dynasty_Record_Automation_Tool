@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DynastyRecordUpdaterTool:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DynastyRecordUpdaterTool_jar</output-path>
+    <root id="archive" name="DynastyRecordUpdaterTool.jar">
+      <element id="module-output" name="DynastyRecordUpdaterTool" />
+    </root>
+  </artifact>
+</component>

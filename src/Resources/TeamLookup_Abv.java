@@ -1,0 +1,145 @@
+package Resources;
+
+import java.util.Map;
+import java.util.HashMap;
+
+public class TeamLookup_Abv
+{
+    private final static Map<Integer, String> teamMap;
+
+    static
+    {
+        teamMap = new HashMap<>();
+        teamMap.put(1,   "AF");
+        teamMap.put(2,   "Akron");
+        teamMap.put(3,   "Bama");
+        teamMap.put(4,   "Ariz");
+        teamMap.put(5,   "ASU");
+        teamMap.put(6,   "Ark");
+        teamMap.put(7,   "Ark St");
+        teamMap.put(8,   "Army");
+        teamMap.put(9,   "Auburn");
+        teamMap.put(10,  "Ball St");
+        teamMap.put(11,  "Baylor");
+        teamMap.put(12,  "Boise St");
+        teamMap.put(13,  "BC");
+        teamMap.put(14,  "BGSU");
+        teamMap.put(15,  "Buffalo");
+        teamMap.put(16,  "BYU");
+        teamMap.put(17,  "Cal");
+        teamMap.put(18,  "UCF");
+        teamMap.put(19,  "CMU");
+        teamMap.put(20,  "Cincy");
+        teamMap.put(21,  "Clemson");
+        teamMap.put(22,  "CU");
+        teamMap.put(23,  "CSU");
+        teamMap.put(24,  "Duke");
+        teamMap.put(25,  "ECU");
+        teamMap.put(26,  "EMU");
+        teamMap.put(27,  "Florida");
+        teamMap.put(28,  "FSU");
+        teamMap.put(29,  "Fres St");
+        teamMap.put(30,  "UGA");
+        teamMap.put(31,  "GT");
+        teamMap.put(32,  "Hawai'i");
+        teamMap.put(33,  "Houston");
+        teamMap.put(34,  "App St");
+        teamMap.put(35,  "Illini");
+        teamMap.put(36,  "Indiana");
+        teamMap.put(37,  "Iowa");
+        teamMap.put(38,  "ISU");
+        teamMap.put(39,  "Kansas");
+        teamMap.put(40,  "KSU");
+        teamMap.put(41,  "Kent St");
+        teamMap.put(42,  "UK");
+        teamMap.put(43,  "La Tech");
+        teamMap.put(44,  "UL");
+        teamMap.put(45,  "LSU");
+        teamMap.put(46,  "Marsh");
+        teamMap.put(47,  "Maryland");
+        teamMap.put(48,  "Memphis");
+        teamMap.put(49,  "Miami");
+        teamMap.put(50,  "Miami (OH)");
+        teamMap.put(51,  "Michigan");
+        teamMap.put(52,  "Mich St");
+        teamMap.put(53,  "MTSU");
+        teamMap.put(54,  "Minn");
+        teamMap.put(55,  "Miss St");
+        teamMap.put(56,  "Mizzou");
+        teamMap.put(57,  "Navy");
+        teamMap.put(58,  "Nebraska");
+        teamMap.put(59,  "Nevada");
+        teamMap.put(60,  "UNM");
+        teamMap.put(61,  "CCU");
+        teamMap.put(62,  "UNC");
+        teamMap.put(63,  "NC State");
+        teamMap.put(64,  "NT");
+        teamMap.put(65,  "ULM");
+        teamMap.put(66,  "NIU");
+        teamMap.put(67,  "NU");
+        teamMap.put(68,  "ND");
+        teamMap.put(69,  "Ohio");
+        teamMap.put(70,  "OSU");
+        teamMap.put(71,  "OU");
+        teamMap.put(72,  "OK St");
+        teamMap.put(73,  "Ole Miss");
+        teamMap.put(74,  "Oregon");
+        teamMap.put(75,  "Or St");
+        teamMap.put(76,  "PSU");
+        teamMap.put(77,  "Pitt");
+        teamMap.put(78,  "Purdue");
+        teamMap.put(79,  "Rice");
+        teamMap.put(80,  "Rutgers");
+        teamMap.put(81,  "SDSU");
+        teamMap.put(82,  "SJSU");
+        teamMap.put(83,  "SMU");
+        teamMap.put(84,  "S Car");
+        teamMap.put(85,  "So. Miss");
+        teamMap.put(86,  "ULL");
+        teamMap.put(87,  "Stanford");
+        teamMap.put(88,  "SU");
+        teamMap.put(89,  "TCU");
+        teamMap.put(90,  "Temple");
+        teamMap.put(91,  "Tenn");
+        teamMap.put(92,  "Texas");
+        teamMap.put(93,  "TAMU");
+        teamMap.put(94,  "TTU");
+        teamMap.put(95,  "Toledo");
+        teamMap.put(96,  "Tulane");
+        teamMap.put(97,  "Tulsa");
+        teamMap.put(98,  "UAB");
+        teamMap.put(99,  "UCLA");
+        teamMap.put(100, "CLT");
+        teamMap.put(101, "UNLV");
+        teamMap.put(102, "USC");
+        teamMap.put(103, "Utah");
+        teamMap.put(104, "Utah St");
+        teamMap.put(105, "UTEP");
+        teamMap.put(106, "Vandy");
+        teamMap.put(107, "UVA");
+        teamMap.put(108, "VT");
+        teamMap.put(109, "WF");
+        teamMap.put(110, "Wash");
+        teamMap.put(111, "Wazzu");
+        teamMap.put(112, "WVU");
+        teamMap.put(113, "WMU");
+        teamMap.put(114, "Wisc");
+        teamMap.put(115, "Wyoming");
+        teamMap.put(143, "Troy");
+        teamMap.put(144, "USF");
+        teamMap.put(181, "GA SO");
+        teamMap.put(211, "WKU");
+        teamMap.put(218, "Tx St");
+        teamMap.put(229, "FAU");
+        teamMap.put(230, "JMU");
+        teamMap.put(232, "UTSA");
+        teamMap.put(233, "GSU");
+        teamMap.put(234, "ODU");
+        teamMap.put(235, "USA");
+    }
+
+    public static String getTeamName_Abv(int teamID)
+    {
+        return TeamLookup_Abv.teamMap.get(teamID);
+    }
+}
