@@ -17,11 +17,11 @@ class main extends JFrame
 class InputFrame extends JFrame implements ActionListener, WindowListener
 {
     private JPanel inputDataPanel;
-    private JTextField oigsTextField, digsTextField, offIndSeasonStatsTextField, defIndSeasonStatsTextField,
-                       kickIndSeasonStatsTextField, returnIndSeasonStatsTextField, teamGameStatsTextField,
-                       coachCareerStatsTextField, scheduleDataTextField, playersTextField, schoolRecordsTextField,
-                       ncaaRecordsTextField;
-    private JLabel ffensiveIndividualGameStatsLabel, defensiveIndividualGameStatsLabel, offIndSeasonStatsLabel,
+    private JTextField oigsTextField, digsTextField, kickIndGameStatsTextField, returnIndGameStatsTextField,
+                       offIndSeasonStatsTextField, defIndSeasonStatsTextField,  kickIndSeasonStatsTextField,
+                       returnIndSeasonStatsTextField, teamGameStatsTextField, coachCareerStatsTextField,
+                       scheduleDataTextField, playersTextField, schoolRecordsTextField, ncaaRecordsTextField;
+    private JLabel offensiveIndividualGameStatsLabel, defensiveIndividualGameStatsLabel, offIndSeasonStatsLabel,
                    defIndSeasonStatsLabel, kickIndSeasonStatsLabel, schoolRecordsLabel, ncaaRecordsLabel,
                    returnIndSeasonStatsLabel, teamGameStatsLabel, coachCareerStatsLabel, scheduleDataLabel;
     private JButton offIndGameStatsBrowseBtn, defIndGameStatsBrowseBtn, offIndSeasonStatsBrowseBtn,
@@ -31,6 +31,8 @@ class InputFrame extends JFrame implements ActionListener, WindowListener
 
     public InputFrame()
     {
+        ImageIcon img = new ImageIcon("ncaa14logo.png");
+        this.setIconImage(img.getImage());
         this.setContentPane(inputDataPanel);
         this.setTitle("Dynasty Record Updater Tool");
         this.setSize(600, 600);
