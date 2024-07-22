@@ -1,21 +1,15 @@
-import java.awt.event.WindowEvent;
 import java.io.*;
 import javax.swing.*;
+import java.awt.event.WindowEvent;
 
 import java.awt.event.ActionEvent;
+import java.util.prefs.Preferences;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowListener;
 
-class main extends JFrame
-{
-    public static void main(String[] args)
-    {
-        new InputFrame();
-    }
-}
-
 class InputFrame extends JFrame implements ActionListener, WindowListener
 {
+    private static final String LAST_USED_FOLDER = "";
     private JPanel inputDataPanel;
     private JTextField oigsTextField, digsTextField, kickIndGameStatsTextField, returnIndGameStatsTextField,
                        offIndSeasonStatsTextField, defIndSeasonStatsTextField,  kickIndSeasonStatsTextField,
@@ -54,7 +48,6 @@ class InputFrame extends JFrame implements ActionListener, WindowListener
 
         this.setVisible(true);
         this.pack();
-
     }
 
     public void actionPerformed(ActionEvent e)
@@ -72,9 +65,11 @@ class InputFrame extends JFrame implements ActionListener, WindowListener
            e.getSource() == ncaaRecordsBrowseBtn ||
            e.getSource() == playersTabBrowseBtn)
         {
+
+            Preferences pref = Preferences.userRoot().node(getClass().getName());
             // Create file chooser object (the button you click to browse file explorer and select the appropriate file).
             // The starting directory of the file chooser is given in the constructor.
-            JFileChooser fileChooser = new JFileChooser("C:\\Users\\jarre\\Coding Projects\\Java\\DynastyRecordUpdaterTool\\Files");
+            JFileChooser fileChooser = new JFileChooser(pref.get(LAST_USED_FOLDER, new File(".").getAbsolutePath()));
 
             // Saves the response of the file chooser button to the response variable
             int response = fileChooser.showOpenDialog(null);
@@ -87,37 +82,59 @@ class InputFrame extends JFrame implements ActionListener, WindowListener
                 if (e.getSource().equals(offIndGameStatsBrowseBtn))
                 {
                     oigsTextField.setText(file.toString());
-                } else if (e.getSource().equals(defIndGameStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(defIndGameStatsBrowseBtn))
                 {
                    digsTextField.setText(file.toString());
-                } else if (e.getSource().equals(offIndSeasonStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(offIndSeasonStatsBrowseBtn))
                 {
                     offIndSeasonStatsTextField.setText(file.toString());
-                } else if (e.getSource().equals(defIndSeasonStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(defIndSeasonStatsBrowseBtn))
                 {
                     defIndSeasonStatsTextField.setText(file.toString());
-                } else if (e.getSource().equals(kickIndSeasonStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(kickIndSeasonStatsBrowseBtn))
                 {
                     kickIndSeasonStatsTextField.setText(file.toString());
-                } else if (e.getSource().equals(returnIndSeasonStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(returnIndSeasonStatsBrowseBtn))
                 {
                     returnIndSeasonStatsTextField.setText(file.toString());
-                } else if (e.getSource().equals(teamGameStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(teamGameStatsBrowseBtn))
                 {
                     teamGameStatsTextField.setText(file.toString());
-                } else if (e.getSource().equals(coachCareerStatsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(coachCareerStatsBrowseBtn))
                 {
                     coachCareerStatsTextField.setText(file.toString());
-                } else if (e.getSource().equals(scheduleDataBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(scheduleDataBrowseBtn))
                 {
                     scheduleDataTextField.setText(file.toString());
-                } else if (e.getSource().equals(schoolRecordsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(schoolRecordsBrowseBtn))
                 {
                     schoolRecordsTextField.setText(file.toString());
-                } else if (e.getSource().equals(ncaaRecordsBrowseBtn))
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else if (e.getSource().equals(ncaaRecordsBrowseBtn))
                 {
                     ncaaRecordsTextField.setText(file.toString());
-                } else
+                    pref.put(LAST_USED_FOLDER, fileChooser.getSelectedFile().getParent());
+                }
+                else
                 {
                     playersTextField.setText(file.toString());
                 }

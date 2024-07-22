@@ -2,6 +2,7 @@ package SchoolRecordHandler;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import Resources.PositionLookup;
 import DataStructures.Objects.DISS;
@@ -22,9 +23,20 @@ public class SchoolRecordSeasonComparator
         int recordValue = Integer.parseInt(record[14]);
         int recordDescription = Integer.parseInt(record[4]);
 
-        String recordHolderPlayerID;
         String previousRecordHolder;
         String recordHolder = record[3];
+        String recordHolderPlayerID = record[5];
+
+        // Sometimes the game won't save a player's game records, so this is to update a record that was
+        // not saved.
+        if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
+        {
+            Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
+
+            recordHolder = PositionLookup.getPosition(newHolder.positionID) + " " + newHolder.firstName
+                    + " " + newHolder.lastName + " (" + HashMap_Schedule.year + ")";
+            record[3] = recordHolder;
+        }
 
         switch(offOrDef)
         {

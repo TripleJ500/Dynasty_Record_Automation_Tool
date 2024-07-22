@@ -25,23 +25,24 @@ public class NCAARecord_IndCareerComparator
         String recordHolder = record[3];
         String recordHolderPlayerID = record[5];
 
+
+        // Sometimes the game won't save a player's game records, so this is to update a record that was
+        // not saved.
+        if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
+        {
+            teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
+            Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
+
+            recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
+                    " (" + HashMap_Schedule.year + ")";
+            record[3] = recordHolder;
+        }
+
         switch (recordDescription)
         {
             // Most Rush Yards in a Career
             case 32 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
@@ -72,18 +73,6 @@ public class NCAARecord_IndCareerComparator
             // Most Rush TDs in a Career
             case 33 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
@@ -114,18 +103,6 @@ public class NCAARecord_IndCareerComparator
             // Most Pass Yards in a Career
             case 34 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
@@ -156,18 +133,6 @@ public class NCAARecord_IndCareerComparator
             // Most Pass TDs in a Career
             case 35 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
@@ -198,18 +163,6 @@ public class NCAARecord_IndCareerComparator
             // Most Receptions in a Career
             case 36 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
@@ -240,19 +193,7 @@ public class NCAARecord_IndCareerComparator
             // Most Receiving Yards in a Career
             case 37 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
-                for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
+                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
                     int currentValue = o.receivingYards;
@@ -282,18 +223,6 @@ public class NCAARecord_IndCareerComparator
             // Most Receiving Touchdowns in a Career
             case 38 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, OISS> key : oCHashMap.entrySet())
                 {
                     OISS o = key.getValue();
@@ -324,18 +253,6 @@ public class NCAARecord_IndCareerComparator
             // Most Sacks in a Career
             case 39 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, DISS> key : dCHashMap.entrySet())
                 {
                     DISS d = key.getValue();
@@ -366,18 +283,6 @@ public class NCAARecord_IndCareerComparator
             // Most Interceptions in a Career
             case 40 ->
             {
-                // Sometimes the game won't save a player's game records, so this is to update a record that was
-                // not saved.
-                if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
-                {
-                    teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
-                    Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
-
-                    recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
-                            " (" + HashMap_Schedule.year + ")";
-                    record[3] = recordHolder;
-                }
-
                 for (Map.Entry<Integer, DISS> key : dCHashMap.entrySet())
                 {
                     DISS d = key.getValue();
