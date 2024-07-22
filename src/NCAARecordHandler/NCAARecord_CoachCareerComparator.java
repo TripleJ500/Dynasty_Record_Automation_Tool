@@ -1,6 +1,7 @@
 package NCAARecordHandler;
 
 import java.util.Objects;
+
 import DataStructures.Objects.CCS;
 
 import static DataStructures.List_CCS.ccsHashMap;
@@ -15,6 +16,16 @@ public class NCAARecord_CoachCareerComparator
         String previousRecordHolder;
         String recordHolder = record[3];
         String recordHolderCoachID = record[5];
+
+        // Sometimes the game won't save a player's game records, so this is to update a record that was
+        // not saved.
+        if(!Objects.equals(recordHolderCoachID, String.valueOf(-1)) && ccsHashMap.containsKey(Integer.parseInt(recordHolderCoachID)))
+        {
+            CCS newHolder = ccsHashMap.get(Integer.parseInt(recordHolderCoachID));
+
+            recordHolder = newHolder.coachFirstName + " " + newHolder.coachLastName;
+            record[3] = recordHolder;
+        }
 
         switch (recordDescription)
         {

@@ -3,6 +3,7 @@ package NCAARecordHandler;
 import java.util.Map;
 import java.util.List;
 import java.util.Comparator;
+import java.util.Objects;
 
 import Resources.TeamLookup;
 import Resources.TeamLookup_Abv;
@@ -35,10 +36,23 @@ public class NCAARecord_IndGame_LongComparator
         int weekOfRecord = Integer.parseInt(record[8]);
 
         String teamAbv;
-        String recordHolderPlayerID;
         String previousRecordHolder;
         String recordHolder = record[3];
         String recordOpponent = record[10];
+        String recordHolderPlayerID = record[5];
+
+
+        // Sometimes the game won't save a player's game records, so this is to update a record that was
+        // not saved.
+        if(!Objects.equals(recordHolderPlayerID, String.valueOf(-1)) && pDHashMap.containsKey(Integer.parseInt(recordHolderPlayerID)))
+        {
+            teamAbv = TeamLookup_Abv.getTeamName_Abv(pDHashMap.get(Integer.parseInt(recordHolderPlayerID)).teamID);
+            Player newHolder = pDHashMap.get(Integer.parseInt(recordHolderPlayerID));
+
+            recordHolder = newHolder.firstName + " " + newHolder.lastName + " - " +  teamAbv +
+                    " (" + HashMap_Schedule.year + ")";
+            record[3] = recordHolder;
+        }
 
         switch (recordDescription)
         {
